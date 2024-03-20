@@ -1088,7 +1088,7 @@ footer .logo { margin-bottom: 30px; }
   .logo-item {
       font-size: 0.25rem; /* Adjusted size for smaller screens */
       align-items: center;
-      margin: 10px;
+      margin: 5px;
   }
  
 }
