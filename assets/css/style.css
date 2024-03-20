@@ -37,8 +37,8 @@
   --first-color: hsl(0, 0%, 59%);
   --title-color: hsl(230, 75%, 15%);
   --text-color: hsl(230, 12%, 40%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(230, 100%, 97%);
+  --body-color: #508cfa;
+  --container-color: #508cfa;
   --border-color: hsl(230, 25%, 80%);
 
 
@@ -267,26 +267,11 @@ header .container {
   z-index: 1;
 
   background-position: center;
- 
   padding: 120px 0;
   text-align: center;
   display: grid;
   gap: 70px;
-
-  background: linear-gradient(45deg, #000000, #787879, #000000, #727272, #000000);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background-color: #003ab6;
 }
 
 .about-top { margin-bottom: 120px; }
@@ -1043,16 +1028,6 @@ footer .logo { margin-bottom: 30px; }
 
 
 /* Common styles */
-.section.platform {
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 50px;
-  margin-bottom: 56px;
-  background: linear-gradient(45deg, #f8feff, #f8feff, #f8feff, #f8feff, #f8feff);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
 
 .ribbon-heading {
   color: rgb(168, 166, 166);
@@ -1503,4 +1478,82 @@ img {
   .container {
     margin-inline: auto;
   }
+}
+
+
+
+
+
+
+
+
+/* REVIEWS */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.testimonials{
+  padding: 40px 0;
+  background: #bbbbbb;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: #0059ff;
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonial{
+  background: #fff;
+  padding: 30px;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars{
+  color: #0059ff;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
 }
