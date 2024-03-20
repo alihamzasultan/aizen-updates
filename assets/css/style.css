@@ -1066,22 +1066,31 @@ footer .logo { margin-bottom: 30px; }
 }
 
 .logo-item {
-  margin: 20px;
+  margin: 15px;
+  font-size: 1.5rem;
 }
 
-/* Media queries for responsiveness */
+/* Media queries for responsiveness 
 @media screen and (max-width: 768px) {
   .logo-item {
-      flex: 0 0 25%; /* Adjust as needed */
+      flex: 0 0 25%; 
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-item {
-      flex: 0 0 50%; /* Adjust as needed */
+      flex: 0 0 50%; 
   }
 }
+/* Adjust as needed */
 
+@media screen and (max-width: 768px) {
+  .logo-item {
+      font-size: 0.25rem; /* Adjusted size for smaller screens */
+      align-items: center;
+  }
+ 
+}
 @keyframes gradientAnimation {
   0% {
       background-position: 0% 50%;
