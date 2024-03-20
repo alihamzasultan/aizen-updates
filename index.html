@@ -320,18 +320,15 @@
     - #Reviews
   -->
 
-<section class="reviews">
-
-  <div class="testimonials">
-    <div class="inner">
-      <h1>Reviews</h1>
-      <div class="border"></div>
-
-      <div class="row">
-        <div class="col">
+  <section class="reviews">
+    <div class="heading">Reviews</div>
+    <div class="reviews-container">
+ 
+      <div class="ribbon">
+        <div class="testimonials">
           <div class="testimonial">
             <img src="./assets/img/p1.png" alt="">
-            <div class="name">Full name</div>
+            <div class="name">John Doe</div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -339,35 +336,14 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           </div>
         </div>
-
-        <div class="col">
+        
+        <div class="testimonials">
           <div class="testimonial">
-            <img src="./assets/img/p1.png" alt="">
-            <div class="name">Full name</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            </p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="testimonial">
-            <img src="./assets/img/p1.png" alt="">
-            <div class="name">Full name</div>
+            <img src="./assets/img/p2.png" alt="">
+            <div class="name">Jane Smith</div>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -375,18 +351,94 @@
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
             </div>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            </p>
+            <p>Another satisfied customer! Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           </div>
         </div>
+        
+        <div class="testimonials">
+          <div class="testimonial">
+            <img src="./assets/img/p3.png" alt="">
+            <div class="name">Michael Johnson</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>Great experience! Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <img src="./assets/img/p3.png" alt="">
+            <div class="name">Michael Johnson</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>Great experience! Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <img src="./assets/img/p3.png" alt="">
+            <div class="name">Michael Johnson</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>Great experience! Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+        
       </div>
+      <button class="add-review-btn" onclick="openReviewForm()">Add Review</button>
+    </div>
+  </section>
+
+  
+  <div id="review-form-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeReviewForm()">&times;</span>
+      <h2>Add Review</h2>
+      <form id="review-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="rating">Rating:</label>
+        <div id="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5">5 stars</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4">4 stars</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3">3 stars</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2">2 stars</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1">1 star</label>
+        </div><br><br>
+        
+        <label for="review">Review:</label><br>
+        <textarea id="review" name="review" required></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </div>
+  
 
-
-</section>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
      

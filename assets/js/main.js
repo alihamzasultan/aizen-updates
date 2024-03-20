@@ -42,3 +42,29 @@ loginBtn.addEventListener('click', () =>{
 loginClose.addEventListener('click', () =>{
    login.classList.remove('show-login')
 })
+
+
+function openReviewForm() {
+   // You can add your logic here to open a review form or perform any action
+   alert('Review form will be opened.');
+ }
+ 
+
+ // Open review form modal
+function openReviewForm() {
+   document.getElementById('review-form-modal').style.display = 'block';
+ }
+ 
+ // Close review form modal
+ function closeReviewForm() {
+   document.getElementById('review-form-modal').style.display = 'none';
+ }
+ 
+ // Submit review form
+ document.getElementById('review-form').addEventListener('submit', function(e) {
+   e.preventDefault();
+   // Add your logic here to handle form submission (e.g., send data to server)
+   alert('Review submitted successfully!');
+   closeReviewForm();
+ });
+ 

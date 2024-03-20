@@ -78,3 +78,37 @@ loginClose.addEventListener('click', () =>{
    login.classList.remove('show-login')
 })
 
+
+
+
+/* REVIEWS */
+document.addEventListener("DOMContentLoaded", function() {
+   const testimonials = document.querySelectorAll('.testimonial');
+   let currentTestimonialIndex = 0;
+ 
+   function showTestimonial(index) {
+     testimonials.forEach((testimonial, i) => {
+       if (i === index) {
+         testimonial.style.opacity = 1;
+       } else {
+         testimonial.style.opacity = 0;
+       }
+     });
+   }
+ 
+   function fadeInNextTestimonial() {
+     currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+     showTestimonial(currentTestimonialIndex);
+     setTimeout(fadeInNextTestimonial, 5000); // Change testimonial every 5 seconds
+   }
+ 
+   // Initial call to start fading testimonials
+   fadeInNextTestimonial();
+ });
+ 
+ 
+ function openReviewForm() {
+   // You can add your logic here to open a review form or perform any action
+   alert('Review form will be opened.');
+ }
+ 

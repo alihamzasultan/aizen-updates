@@ -1488,72 +1488,147 @@ img {
 
 
 /* REVIEWS */
-*{
-  margin: 0;
-  padding: 0;
-  font-family: "montserrat",sans-serif;
-}
-.testimonials{
-  padding: 40px 0;
-  background: #bbbbbb;
-  color: #434343;
-  text-align: center;
-}
-.inner{
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 20px;
+/* Add your custom styles here */
+/* Reviews container */
+.reviews-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 800px; /* Adjust height as needed */
+  overflow-y: auto;
 }
 
-.border{
-  width: 160px;
-  height: 5px;
-  background: #0059ff;
-  margin: 26px auto;
+/* Heading */
+
+
+/* Testimonial */
+.testimonial {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+
 }
 
-.row{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.col{
-  flex: 33.33%;
-  max-width: 33.33%;
-  box-sizing: border-box;
-  padding: 15px;
-}
-.testimonial{
-  background: #fff;
-  padding: 30px;
-}
-.testimonial img{
-  width: 100px;
-  height: 100px;
+.testimonial img {
+  width: 80px;
   border-radius: 50%;
+  margin-bottom: 10px;
 }
-.name{
-  font-size: 20px;
-  text-transform: uppercase;
-  margin: 20px 0;
+
+.name {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.stars{
-  color: #0059ff;
+
+.stars {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.stars i {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Reviews heading */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* Align heading text to center */
+  margin-bottom: 50px; /* Add margin at the bottom */
+  margin-top: 50px; /* Add margin at the top */
+}
+
+/* Testimonial hover effect */
+.testimonial:hover {
+  background-color: #c7f2ff; /* Change background color on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+  transform: scale(1.02); /* Scale the review slightly on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Add smooth transition */
+}
+
+
+/* Add Review button */
+.add-review-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
   margin-bottom: 20px;
 }
 
-
-@media screen and (max-width:960px) {
-.col{
-  flex: 100%;
-  max-width: 80%;
-}
+.add-review-btn:hover {
+  background-color: #0056b3;
 }
 
-@media screen and (max-width:600px) {
-.col{
-  flex: 100%;
-  max-width: 100%;
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
 }
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#star-rating input[type="radio"] {
+  display: none;
+}
+
+#star-rating label {
+  color: #ffc107;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#star-rating label:hover,
+#star-rating label:hover ~ label {
+  color: #ffc107;
+}
+
+
+
+
+
+
+
+
+
+
