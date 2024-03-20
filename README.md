@@ -13,9 +13,6 @@
 
   <h2 align="center">Aizen - Agency landing page</h2>
 
-  
-  <a href="https://codewithsadee.github.io/funel-agency_landing_page/"><strong>➥ Live Demo</strong></a>
-
 </div>
 
 <br />
