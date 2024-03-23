@@ -225,29 +225,27 @@ header .container {
  * #HERO
 \*-----------------------------------*/
 
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  background-image:('G:/funel-agency_landing_page-master/funel-agency_landing_page-master/assets/images/bg.png');
+
+  .hero {
+    position: relative;
+    background-image: url("G:/funel-agency_landing_page-master - Copy/funel-agency_landing_page-master/assets/images/bg.png"); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color on top of the background image */
+  }
   
-}
 
 .hero-content { text-align: center; }
 
 .hero-title,
 .hero-text { margin-bottom: 40px;
-  color: #5f0000;
+  color: #ffffff;
   z-index: 1; 
   animation: fadeIn 2s forwards;}
 
 .hero-text {
   font-size: var(--fs-4);
-  color:#aaa;
+  color:#c0bebe;
   z-index: 1;
 }
 
@@ -1675,8 +1673,6 @@ p {
 .hero {
   position: relative;
   height: 100vh;
-
-  background-color: #f0f0f0;
 }
 
 .hero-content {
