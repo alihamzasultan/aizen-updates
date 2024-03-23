@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
@@ -60,11 +60,7 @@ function openReviewForm() {
    document.getElementById('review-form-modal').style.display = 'none';
  }
  
- // Submit review form
- document.getElementById('review-form').addEventListener('submit', function(e) {
-   e.preventDefault();
-   // Add your logic here to handle form submission (e.g., send data to server)
-   alert('Review submitted successfully!');
-   closeReviewForm();
- });
- 
+
+console.log("hello");
+
+

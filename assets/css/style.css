@@ -23,7 +23,7 @@
   --maximum-yellow-red: hsl(0, 0%, 53%);
   --royal-blue-dark: hsl(0, 0%, 0%);
   --silver-chalice: hsl(0, 0%, 70%);
-  --oxford-blue: hsl(231, 100%, 8%);
+  --oxford-blue: #000629;
   --bittersweet: hsl(220, 2%, 27%);
   --french-rose: hsl(0, 0%, 73%);
   --davys-gray: hsl(180, 3%, 28%);
@@ -131,7 +131,7 @@ html {
 }
 
 body {
-  background-image: "assets/img/bg-image.png";
+  background-image: ("assets/img/bg-image.png");
   overflow-x: hidden;
 }
 
@@ -140,6 +140,7 @@ body {
 ::-webkit-scrollbar-track { background: var(--white); }
 
 ::-webkit-scrollbar-thumb { background: hsl(0, 0%, 50%); }
+
 
 
 
@@ -226,20 +227,28 @@ header .container {
 
 .hero {
   position: relative;
-  padding: 130px 0 140px;
-  z-index: 1;
-  margin-top: 100px;
-  margin-bottom: 300px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-image:('G:/funel-agency_landing_page-master/funel-agency_landing_page-master/assets/images/bg.png');
+  
 }
 
 .hero-content { text-align: center; }
 
 .hero-title,
-.hero-text { margin-bottom: 40px; }
+.hero-text { margin-bottom: 40px;
+  color: #5f0000;
+  z-index: 1; 
+  animation: fadeIn 2s forwards;}
 
 .hero-text {
   font-size: var(--fs-4);
-  color: var(--oxford-blue);
+  color:#aaa;
+  z-index: 1;
 }
 
 .hero .btn-primary { margin-inline: auto; }
@@ -248,7 +257,7 @@ header .container {
 
 .shape-content {
   position: absolute;
-  width: 900px;
+  width: 100%;
   top: -230px;
   right: -300px;
   z-index: -1;
@@ -271,7 +280,7 @@ header .container {
   text-align: center;
   display: grid;
   gap: 70px;
-  background-color: #003ab6;
+  background-color: #fffb00;
 }
 
 .about-top { margin-bottom: 120px; }
@@ -1031,18 +1040,36 @@ footer .logo { margin-bottom: 30px; }
 
 .ribbon-heading {
   color: rgb(168, 166, 166);
-  font-size: 2rem;
+  font-size: 1rem;
+  display: flex; /* Make it a flex container */ /* Align children (content) along the main axis (horizontally) */
+  align-items: center; /* Align children (content) along the cross axis (vertically) */
+  margin-bottom: 120px;
 }
 
 .logos-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  animation: 30s slide infinite linear;
+
 }
 
 .logo-item {
-  margin: 15px;
-  font-size: 1.5rem;
+  margin: 50px;
+  font-size: 1rem;
+  display: flex; /* Make it a flex container */
+  align-items: center;/* Align children (content) along the cross axis (vertically) */
+}
+
+@keyframes slide{
+  from{
+transform: translate(0);
+  }
+  to{
+transform: translate(-100%);
+  }
 }
 
 /* Media queries for responsiveness 
@@ -1064,7 +1091,14 @@ footer .logo { margin-bottom: 30px; }
       font-size: 0.25rem; /* Adjusted size for smaller screens */
       align-items: center;
       margin: 5px;
+      margin-bottom: 100px;
+
   }
+  .logos-container {
+    width: auto;
+    height: 200px;
+  }
+  
  
 }
 @keyframes gradientAnimation {
@@ -1085,7 +1119,7 @@ footer .logo { margin-bottom: 30px; }
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 0.1rem;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -1625,10 +1659,83 @@ p {
 
 
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logos-container{
+  white-space: nowrap;
+}
 
 
 
 
+.hero {
+  position: relative;
+  height: 100vh;
+
+  background-color: #f0f0f0;
+}
+
+.hero-content {
+  z-index: 2;
+}
 
 
+.hero-text {
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: slideInLeft 2s forwards;
+}
+
+.btn-primary {
+  animation: slideInRight 2s forwards;
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
